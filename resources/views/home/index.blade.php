@@ -1,7 +1,20 @@
 @extends('layouts.app')
 
+@section('title')
+Welcome
+@endsection
 @section('content')
-    
+
+@include('layouts.partials.slider')
+
+<div class="content-block">
+    <div class="content-wrapper">
+        <div class="wonderful-menus">
+            <h2>Our Menus</h2>
+        </div>
+    </div>
+</div>
+
 @endsection
 
 @push('scripts')

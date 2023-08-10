@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')
-                ->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::resource('category', CategoryController::class, ['except' => ['store', 'update', 'destroy']]);
 
 require __DIR__.'/auth.php';

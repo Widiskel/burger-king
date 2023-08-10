@@ -3551,26 +3551,27 @@ setTimeout(function () {
     $message.removeClass("fadeInDown").addClass("fadeOutUp");
 }, 3000);
 $(".cart-block").hover(function () {
-    $(".cart-error").hide();
-    $.ajax({
-        type: 'GET',
-        url: '/cart/floating-cart',
-        cache: false,
-        beforeSend: function () {
-            $(".cart-content-data").hide();
-            $(".loading-cart").show();
-        },
-        success: function (data) {
-            $(".cart-data").html(data.html);
-            updateCart(data.cart);
-        },
-        error: function () {
-            $(".cart-error").show();
-        },
-        complete: function () {
-            $(".loading-cart").hide();
-        }
-    });
+    $(".cart-error").show();
+    // $(".cart-error").hide();
+    // $.ajax({
+    //     type: 'GET',
+    //     url: '#',
+    //     cache: false,
+    //     beforeSend: function () {
+    //         $(".cart-content-data").hide();
+    //         $(".loading-cart").show();
+    //     },
+    //     success: function (data) {
+    //         $(".cart-data").html(data.html);
+    //         updateCart(data.cart);
+    //     },
+    //     error: function () {
+    //         $(".cart-error").show();
+    //     },
+    //     complete: function () {
+    //         $(".loading-cart").hide();
+    //     }
+    // });
 });
 window.onscroll = function () {
     scrollDetection()

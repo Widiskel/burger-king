@@ -3006,7 +3006,7 @@ textarea {
 }
 
 .promotion .content-block {
-    background-image: url("/static/website/img/BK_bg.jpg?5218847fa211");
+    background-image: url("../../public/img/bg_fresh.jpeg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat
@@ -3092,7 +3092,7 @@ textarea {
 }
 
 .menus.menus-background {
-    background: url("/static/website/img/BK_bg.jpg?5218847fa211") no-repeat center center fixed;
+    background: url("../../public/img/bg_fresh.jpeg") no-repeat center center fixed;
     background-size: cover
 }
 
@@ -4270,11 +4270,11 @@ h1.header {
 }
 
 .stacked .background-no-driver {
-    content: url("/static/website/img/Unbale-to-find-a-driver-2x.jpg?36a08aee5589")
+    content: url("../../public/img/Unbale-to-find-a-driver-2x.jpg")
 }
 
 .stacked .background {
-    content: url("/static/website/img/driver-OTW-2x.jpg?36a08aee5589")
+    content: url("../../public/img/driver-OTW-2x.jpg")
 }
 
 .stacked h1 {
@@ -4318,7 +4318,7 @@ h1.header {
 .landing-page {
     display: flex;
     flex-direction: row;
-    background: url("/static/website/img/BK-landing-page-background.jpg?336cd8545913");
+    background: url("../../public/img/landing-page-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover
@@ -9296,4 +9296,120 @@ input.modifier-quantity:disabled {
     font-weight: normal;
     font-style: normal;
     font-display: swap
+}
+
+.validation-message{
+    font-size: small;
+    color: red;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #404040;
+    
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    flex-grow: 1; 
+    margin-right: 10px; 
+}
+
+.card-button {
+    background-color: #ed7801;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: #c93a1a;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    
+}
+
+
+.responsive-table {
+    margin-top: 10px;
+    background-color: #ed7801;
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+border-radius: 10px;
+}
+
+.responsive-table th{
+    padding-inline: 15px;
+    padding-block: 15px;
+    color: white;
+    text-align: left;
+}
+.responsive-table td {
+    background-color: #fbe6d6;
+    padding-inline: 15px;
+    padding-block: 8px;
+    color: #8b542f;
+    text-align: left;
+}
+.responsive-table td.nodata {
+    text-align: center;
+}
+
+.responsive-table tr:hover td {
+    background-color: #f5f5f5;
+}
+
+
+@media (max-width: 768px) {
+    .responsive-table {
+        border: none;
+    }
+    
+    .responsive-table thead {
+        display: none;
+    }
+    
+    .responsive-table tr {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    .responsive-table td {
+        border: none;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.action-button {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: #ed7801;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
 }
