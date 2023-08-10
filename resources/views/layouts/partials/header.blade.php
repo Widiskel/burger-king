@@ -9,30 +9,53 @@
                 </a>
                 <div class="left-navigation">
                     <div class="group-title">
-                        <a href="/menus/">
+                        <a href="#">
                             <span class="subtitle">Delivery</span>
                             <span class="title">Order</span>
                         </a>
                     </div>
                     <div class="group-title">
-                        <a href="/news-v1/">
+                        <a href="#">
                             <span class="subtitle">Get Fresh</span>
                             <span class="title">Promotions</span>
                         </a>
                     </div>
                     <div class="group-title">
-                        <a href="/large-orders/">
+                        <a href="#">
                             <span class="subtitle">Exclusive</span>
                             <span class="title">Large Order</span>
                         </a>
                     </div>
                 </div>
                 <div class="right-navigation">
-                    <div class="group">
-                        <div class="login"><a href="/accounts/login">LOGIN</a></div>
-                    </div>
+                    @auth
+                        <div class="group group-login">
+                            <div class="login">
+                                
+                                <a href="@if(auth()->user()->hasRole('Superadmin')) /dashboard/ @else /orders/ @endif">
+                                    <span class="title name-label">
+                                        <img class="profile-img"
+                                            src="{{asset('img/top-profile1x.png')}}"
+                                            srcset="{{asset('img/top-profile1x.png')}} 1x, 
+                                            {{asset('img/top-profile2x.png')}} 2x">
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="group-title">
+                                <span></span>
+                                <span class="title">{{auth()->user()->roles[0]->name}}</span>
+                            </div>
+                        </div>
+                    @endauth
+                    @guest
+                        <div class="group">
+                            <div class="login"><a href="{{ route('login') }}">LOGIN</a></div>
+                        </div>
+                    @endguest
                     <div class="cart-block">
-                        <a href="/cart/preview" id="cart" class="cart">
+                        <a href="#" id="cart" class="cart">
                             <span class="badge red hide">-</span>
                             <img src="{{ asset('img/cart.png') }}"
                                 srcset="{{ asset('img/cart.png') }},
@@ -44,7 +67,17 @@
                                 <div class="loading-cart hide">
                                     <img src="{{ asset('img/loading_cart.gif') }}" />
                                 </div>
-                                <p class="cart-error hide">Cart is temporarily unavailable.</p>
+                               @guest
+                                <div class="cart-content-data">
+                                    <div class="card-content-data-wrapper">
+                                        <table class="table-floating">
+                                        </table>
+                                        <p class="cart-error">Cart is temporarily unavailable.</p>
+                                        
+                                    </div>
+                                </div>
+                                @endguest
+                                @auth
                                 <div class="cart-content-data">
                                     <div class="card-content-data-wrapper">
                                         <table class="table-floating">
@@ -53,6 +86,7 @@
                                         <a href="/cart/preview" class="button button-order-now">Order Now</a>
                                     </div>
                                 </div>
+                                @endauth
                             </div>
                         </div>
                     </div>
