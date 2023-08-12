@@ -48,20 +48,20 @@ untuk menyiapkan projek ini ada beberapa hal yang harus anda siapkan
 
 untuk melakukan instalasi dan set-up projek ini ada beberapa tahap dan perintah yang harus anda jalankan
 
-### step 1
+### Step 1
 buat database dengan nama yang anda inginkan, contoh disini saya menggunakan database dengan nama  ``` burger ```
-### step 2
+### Step 2
 buka terminal anda dan jalankan perintah perintah berikut secara berurutan
 ```bash
     cd [project]
     cp .env.example .env
 ```
-### step 3
+### Step 3
 siapkan file .env , ubah bagian database sesuai dengan yang anda gunakan
 ```
     nano .env
 ```
-### step 4
+### Step 4
 jalankan perintah - perintah berikut
 ```
     composer install
@@ -81,7 +81,7 @@ jika anda ingin memantai secara realtime langsung selama proses development , an
     npm run dev
 ```
 
-### installation note
+### Installation note
 harap dipastikan APP_URL pada ```.env``` sesuai dengan port dimana anda menjalankan project ini, contoh ```APP_URL=http://localhost:8000```
 
 ## Optimizations
