@@ -3245,17 +3245,6 @@ if (typeof (Storage) === "undefined") {
     alert("Sorry, Your browser is too old! Please update your browser!");
 }
 
-function checkMinOrderValue(minimumValue, subtotal) {
-    if (subtotal < minimumValue) {
-        $('.minimum-transaction').show();
-        $('.continue-wrapper').hide();
-        $('.button-form').hide();
-    } else {
-        $('.minimum-transaction').hide();
-        $('.continue-wrapper').show();
-        $('.button-form').show();
-    }
-}
 var updateCart = function (cartData) {
     var cartCount = 0;
     for (var i = 0; i < cartData.items.length; i++) {
@@ -3265,10 +3254,6 @@ var updateCart = function (cartData) {
         $(".badge").removeClass("hide");
     }
     $("#cart .badge").html(cartCount);
-    if ($(".grandtotal .number").length !== 0) {
-        $(".grandtotal .number").html(numberWithCommas(cartData.subtotal));
-        checkMinOrderValue(minimumValue, cartData.subtotal);
-    }
 };
 var addToCart = function (variantCode, modifiers, quantity, notes, token, preview, upsize, price) {
     var querystring = "";
@@ -3552,27 +3537,31 @@ setTimeout(function () {
 }, 3000);
 $(".cart-block").hover(function () {
     $(".cart-error").show();
-    // $(".cart-error").hide();
-    // $.ajax({
-    //     type: 'GET',
-    //     url: '#',
-    //     cache: false,
-    //     beforeSend: function () {
-    //         $(".cart-content-data").hide();
-    //         $(".loading-cart").show();
-    //     },
-    //     success: function (data) {
-    //         $(".cart-data").html(data.html);
-    //         updateCart(data.cart);
-    //     },
-    //     error: function () {
-    //         $(".cart-error").show();
-    //     },
-    //     complete: function () {
-    //         $(".loading-cart").hide();
-    //     }
-    // });
+    $(".cart-error").hide();
+    getCart();
 });
+
+function getCart(){
+    $.ajax({
+        type: 'GET',
+        url: '/cart/floating-cart',
+        cache: true,
+        beforeSend: function () {
+            $(".cart-content-data").hide();
+            $(".loading-cart").show();
+        },
+        success: function (data) {
+            $(".cart-data").html(data.html);
+            updateCart(data.cart);
+        },
+        error: function () {
+            $(".cart-error").show();
+        },
+        complete: function () {
+            $(".loading-cart").hide();
+        }
+    });
+}
 window.onscroll = function () {
     scrollDetection()
 };
@@ -3589,3 +3578,15 @@ function scrollDetection() {
         $messageJs.removeClass("sticky");
     }
 };
+
+Livewire.on('updateCart', function() {
+    getCart();
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const cartBlock = document.querySelector('.cart-block');
+    if (cartBlock) {
+        getCart();
+    }
+});

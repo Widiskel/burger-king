@@ -3,29 +3,24 @@
 namespace App\Http\Livewire\Category;
 
 use App\Models\Category;
-use Illuminate\Http\Request;
 use Livewire\Component;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Livewire\WithConfirmation;
 
 
 class Index extends Component
 {
-    public Category $category;
-    
-    protected $rules = [
-        'name' => 'required|string',
-    ];
+    use WithConfirmation;
 
     public function render()
     {
         $category = Category::paginate(10);
-        $te = 'te';
-        return view('livewire.category.index',compact('category','te'));
+
+        return view('livewire.category.index',compact('category'));
     }
 
-    public function submit()
+    public function delete(Category $category)
     {
-        $this->validate();
+        $category->delete();
     }
     
 }

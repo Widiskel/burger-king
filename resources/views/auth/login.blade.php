@@ -1,8 +1,7 @@
 @extends('layouts.app')
 
-@section('title')
-Login
-@endsection
+@section('bodyClass', 'form-page')
+@section('title','Login')
 
 @section('content')
     <div class="content-block">

@@ -1,8 +1,7 @@
 @extends('layouts.admin')
 
-@section('title')
-    Dashboard
-@endsection
+@section('bodyClass', 'menus accounts order_history')
+@section('title','Dashboard')
 
 @section('account-main')
     <div class="item-lists">

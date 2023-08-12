@@ -1,4 +1,3 @@
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
     line-height: 1.15;
@@ -183,7 +182,8 @@ template {
 @font-face {
     font-family: 'Barlow-Regular';
     src: url("../../public/fonts/Barlow/Barlow-Regular.ttf");
-    src: url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('embedded-opentype'), url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('truetype');
+    src: url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('embedded-opentype'),
+        url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Regular.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -192,7 +192,8 @@ template {
 @font-face {
     font-family: 'Barlow-Medium';
     src: url("../../public/fonts/Barlow/Barlow-Medium.ttf");
-    src: url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('embedded-opentype'), url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('truetype');
+    src: url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('embedded-opentype'),
+        url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Medium.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -201,7 +202,8 @@ template {
 @font-face {
     font-family: 'Barlow-Bold';
     src: url("../../public/fonts/Barlow/Barlow-Bold.ttf");
-    src: url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('embedded-opentype'), url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('truetype');
+    src: url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('embedded-opentype'),
+        url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('woff2'), url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('woff'), url("../../public/fonts/Barlow/Barlow-Bold.ttf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -3819,8 +3821,9 @@ textarea {
 .accounts select {
     margin-right: 3%;
     border: none;
-    border: 1px solid #b7b7b7;
-    padding: 5px 18px;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    padding: 10px 15px;
     border-radius: 5px
 }
 
@@ -4270,11 +4273,11 @@ h1.header {
 }
 
 .stacked .background-no-driver {
-    content: url("../../public/img/Unbale-to-find-a-driver-2x.jpg")
+    content: url("../../public/img/Unbale-to-find-a-driver-2x.jpeg")
 }
 
 .stacked .background {
-    content: url("../../public/img/driver-OTW-2x.jpg")
+    content: url("../../public/img/driver-OTW-2x.jpeg")
 }
 
 .stacked h1 {
@@ -4318,7 +4321,7 @@ h1.header {
 .landing-page {
     display: flex;
     flex-direction: row;
-    background: url("../../public/img/landing-page-background.jpg");
+    background: url("../../public/img/landing-page-background.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover
@@ -4445,7 +4448,7 @@ h1.header {
     position: relative;
     z-index: 1000;
     margin-bottom: 0px;
-    background-image: url("/static/website/img/campaign/New-BG-microsite2.jpg?02b9573ad1bb");
+    background-image: url("../../public/img/New-BG-microsite2.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -4482,7 +4485,7 @@ h1.header {
     background: #040404;
     padding: 50px 55px 30px;
     box-sizing: border-box;
-    background-image: url("/static/website/img/campaign/BG-Text.jpg?c4f05b023381");
+    background-image: url("../../public/img/BG-Text.jpeg");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -4801,7 +4804,7 @@ h1.header {
 
 .campaign .slider .nav a.active:before {
     content: '';
-    background: url("/static/website/img/campaign/Arrow-video.png?35186f767d3f") no-repeat;
+    background: url("../../public/img/Arrow-video.png") no-repeat;
     width: 60px;
     height: 35px;
     background-size: 60px 35px;
@@ -6485,7 +6488,7 @@ input.modifier-quantity:disabled {
 }
 
 .search span.icon-mglass {
-    background: url("/static/website/img/search-putih.png?4557464df5fe") no-repeat;
+    background: url("../../public/img/search-putih.png") no-repeat;
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
@@ -6507,7 +6510,7 @@ input.modifier-quantity:disabled {
 }
 
 .search span.icon-search {
-    background: url("/static/website/img/search-grey.png?4557464df5fe") no-repeat;
+    background: url("../../public/img/search-grey.png") no-repeat;
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
@@ -6516,7 +6519,7 @@ input.modifier-quantity:disabled {
 }
 
 .search .active.icon-search {
-    background: url("/static/website/img/field-clear.png?4557464df5fe") no-repeat;
+    background: url("../../public/img/field-clear.png") no-repeat;
     background-size: 16px 16px
 }
 
@@ -6747,11 +6750,11 @@ input.modifier-quantity:disabled {
     }
 
     .stacked .background-no-driver {
-        content: url("/static/website/img/Unbale-to-find-a-driver-mobile-2x.jpg?36a08aee5589")
+        content: url("../../public/img/Unbale-to-find-a-driver-mobile-2x.jpeg?36a08aee5589")
     }
 
     .stacked .background {
-        content: url("/static/website/img/driver-OTW--mobile-2x.jpg?36a08aee5589")
+        content: url("../../public/img/driver-OTW--mobile-2x.jpeg")
     }
 
     .stacked div:nth-child(2) {
@@ -6865,7 +6868,7 @@ input.modifier-quantity:disabled {
     }
 
     .item-categories.active .icon-mglass {
-        background: url("/static/website/img/search-back-putih.png?4557464df5fe") no-repeat;
+        background: url("../../public/img/search-back-putih.png") no-repeat;
         width: 16px;
         height: 16px;
         background-size: 16px 16px
@@ -8652,7 +8655,7 @@ input.modifier-quantity:disabled {
 
     .campaign .ingredients .ingredient:before {
         content: '';
-        background: url("/static/website/img/campaign/Arrow-hover1.png?35186f767d3f") no-repeat;
+        background: url("../../public/img/Arrow-hover1.png?35186f767d3f") no-repeat;
         width: 40px;
         height: 40px;
         background-size: 40px;
@@ -8673,7 +8676,7 @@ input.modifier-quantity:disabled {
 
     .campaign .ingredients .ingredient .text:before {
         content: '';
-        background: url("/static/website/img/campaign/Arrow-hover2.png?35186f767d3f") no-repeat;
+        background: url("../../public/img/Arrow-hover2.png?35186f767d3f") no-repeat;
         width: 40px;
         height: 40px;
         background-size: 40px;
@@ -9265,7 +9268,8 @@ input.modifier-quantity:disabled {
 @font-face {
     font-family: 'Flame-Regular';
     src: url("../../public/fonts/Flame/Flame-Regular.woff");
-    src: url("../../public/fonts/Flame/Flame-Regular.woff") format('embedded-opentype'), url("../../public/fonts/Flame/Flame-Regular.woff") format('woff'), url("../../public/fonts/Flame/Flame-Regular.woff") format('truetype');
+    src: url("../../public/fonts/Flame/Flame-Regular.woff") format('embedded-opentype'),
+        url("../../public/fonts/Flame/Flame-Regular.woff") format('woff'), url("../../public/fonts/Flame/Flame-Regular.woff") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -9274,7 +9278,8 @@ input.modifier-quantity:disabled {
 @font-face {
     font-family: 'FlameSans';
     src: url("../../public/fonts/Flame/FlameSans.otf");
-    src: url("../../public/fonts/Flame/FlameSans.otf") format('embedded-opentype'), url("../../public/fonts/Flame/FlameSans.otf") format('woff'), url("../../public/fonts/Flame/FlameSans.otf") format('truetype');
+    src: url("../../public/fonts/Flame/FlameSans.otf") format('embedded-opentype'),
+        url("../../public/fonts/Flame/FlameSans.otf") format('woff'), url("../../public/fonts/Flame/FlameSans.otf") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -9283,7 +9288,9 @@ input.modifier-quantity:disabled {
 @font-face {
     font-family: 'FlameSans-Regular';
     src: url("../../public/fonts/Flame/FlameSans-Regular.woff");
-    src: url("../../public/fonts/Flame/FlameSans-Regular.woff") format('embedded-opentype'), url("../../public/fonts/Flame/FlameSans-Regular.woff") format('woff'), url("../../public/fonts/Flame/FlameSans-Regular.woff") format('truetype');
+    src: url("../../public/fonts/Flame/FlameSans-Regular.woff") format('embedded-opentype'),
+        url("../../public/fonts/Flame/FlameSans-Regular.woff") format('woff'),
+        url("../../public/fonts/Flame/FlameSans-Regular.woff") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
@@ -9292,13 +9299,14 @@ input.modifier-quantity:disabled {
 @font-face {
     font-family: 'Flame-Bold';
     src: url("../../public/fonts/Flame/Flame-Bold.woff");
-    src: url("../../public/fonts/Flame/Flame-Bold.woff") format('embedded-opentype'), url("../../public/fonts/Flame/Flame-Bold.woff") format('woff'), url("../../public/fonts/Flame/Flame-Bold.woff") format('truetype');
+    src: url("../../public/fonts/Flame/Flame-Bold.woff") format('embedded-opentype'),
+        url("../../public/fonts/Flame/Flame-Bold.woff") format('woff'), url("../../public/fonts/Flame/Flame-Bold.woff") format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap
 }
 
-.validation-message{
+.validation-message {
     font-size: small;
     color: red;
 }
@@ -9308,14 +9316,14 @@ input.modifier-quantity:disabled {
     align-items: center;
     justify-content: space-between;
     border-bottom: 3px solid #404040;
-    
+
 }
 
 .card-title {
     font-size: 18px;
     font-weight: bold;
-    flex-grow: 1; 
-    margin-right: 10px; 
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
 .card-button {
@@ -9335,12 +9343,20 @@ input.modifier-quantity:disabled {
 .card-body {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     margin-top: 10px;
     margin-bottom: 30px;
-    
 }
 
+.table-container {
+    width: 100%; 
+    overflow-x: auto; 
+}
+
+.table-container table {
+    width: 100%;
+    white-space: nowrap;
+}
 
 .responsive-table {
     margin-top: 10px;
@@ -9348,15 +9364,18 @@ input.modifier-quantity:disabled {
     width: 100%;
     border-collapse: collapse;
     border: none;
-border-radius: 10px;
+    border-radius: 10px;
+    overflow: scroll;
+    white-space: nowrap; 
 }
 
-.responsive-table th{
+.responsive-table th {
     padding-inline: 15px;
     padding-block: 15px;
     color: white;
     text-align: left;
 }
+
 .responsive-table td {
     background-color: #fbe6d6;
     padding-inline: 15px;
@@ -9364,6 +9383,7 @@ border-radius: 10px;
     color: #8b542f;
     text-align: left;
 }
+
 .responsive-table td.nodata {
     text-align: center;
 }
@@ -9377,16 +9397,16 @@ border-radius: 10px;
     .responsive-table {
         border: none;
     }
-    
+
     .responsive-table thead {
         display: none;
     }
-    
+
     .responsive-table tr {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     .responsive-table td {
         border: none;
         display: flex;
@@ -9413,3 +9433,18 @@ border-radius: 10px;
     color: #fff;
     border-color: #333;
 }
+
+.account-menu-images {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.account-banner-images {
+    height: 100px;
+    padding-top: 5px;
+    object-fit: cover;
+}
+
+.disc{
+    text-decoration: line-through;
+    }

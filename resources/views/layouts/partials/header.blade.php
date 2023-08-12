@@ -9,7 +9,7 @@
                 </a>
                 <div class="left-navigation">
                     <div class="group-title">
-                        <a href="#">
+                        <a href="{{route('menus')}}">
                             <span class="subtitle">Delivery</span>
                             <span class="title">Order</span>
                         </a>
@@ -31,7 +31,6 @@
                     @auth
                         <div class="group group-login">
                             <div class="login">
-                                
                                 <a href="@if(auth()->user()->hasRole('Superadmin')) /dashboard/ @else /orders/ @endif">
                                     <span class="title name-label">
                                         <img class="profile-img"
@@ -54,42 +53,7 @@
                             <div class="login"><a href="{{ route('login') }}">LOGIN</a></div>
                         </div>
                     @endguest
-                    <div class="cart-block">
-                        <a href="#" id="cart" class="cart">
-                            <span class="badge red hide">-</span>
-                            <img src="{{ asset('img/cart.png') }}"
-                                srcset="{{ asset('img/cart.png') }},
-                                     {{ asset('img/cart_2x.png') }} 2x" />
-                        </a>
-                        <div class="cart-data">
-                            <div class="cart-list">
-                                <span class="triangle"></span>
-                                <div class="loading-cart hide">
-                                    <img src="{{ asset('img/loading_cart.gif') }}" />
-                                </div>
-                               @guest
-                                <div class="cart-content-data">
-                                    <div class="card-content-data-wrapper">
-                                        <table class="table-floating">
-                                        </table>
-                                        <p class="cart-error">Cart is temporarily unavailable.</p>
-                                        
-                                    </div>
-                                </div>
-                                @endguest
-                                @auth
-                                <div class="cart-content-data">
-                                    <div class="card-content-data-wrapper">
-                                        <table class="table-floating">
-                                        </table>
-                                        <p class="cart-error">Your cart is empty.</p>
-                                        <a href="/cart/preview" class="button button-order-now">Order Now</a>
-                                    </div>
-                                </div>
-                                @endauth
-                            </div>
-                        </div>
-                    </div>
+                    @include('layouts.partials.cart-floating')
                 </div>
             </div>
             <div class="mobile">
@@ -144,3 +108,8 @@
         </div>
     </div>
 </div>
+<a href="#" class="categories-button-close">
+    <img src="{{asset('img/menu-close1x.png')}}"
+         srcset="{{asset('img/menu-close1x.png')}},
+                 {{asset('img/menu-close2x.png')}} 2x" class="close" />
+</a>

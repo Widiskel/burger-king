@@ -12,12 +12,32 @@
             </a>
         </div>
     </div>
+
+    <div class="categories-box @if(request()->routeIs('banner')) active @endif">
+        <div class="text-categories">
+            <a href="{{route('banner.index')}}">
+                <h3>
+                    Banner
+                </h3>
+            </a>
+        </div>
+    </div>
     
     <div class="categories-box @if(request()->routeIs('category')) active @endif">
         <div class="text-categories">
             <a href="{{route('category.index')}}">
                 <h3>
                     Category
+                </h3>
+            </a>
+        </div>
+    </div>
+
+    <div class="categories-box @if(request()->routeIs('menu')) active @endif">
+        <div class="text-categories">
+            <a href="{{route('menu.index')}}">
+                <h3>
+                    Menu
                 </h3>
             </a>
         </div>
