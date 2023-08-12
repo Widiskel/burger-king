@@ -4,6 +4,7 @@
 sebuah projek replika burgerking yang dibangun dengan menggunakan laravel, livewire, javascript. oleh Widianto Eka Saputro
 
 
+
 ## Reference
 
  - [Burger King Delivery Official Website ID](https://bkdelivery.co.id/)
@@ -11,11 +12,13 @@ sebuah projek replika burgerking yang dibangun dengan menggunakan laravel, livew
  - [Livewire](https://livewire.laravel.com/)
 
 
+
 ## Authors
 
 - [Widiskel Github](https://www.github.com/widiskel)
 - [Linkedin Github](https://www.linkedin.com/in/widianto-eka-saputro-5b7a3b168/)
 - [Website](https://widiskel.site)
+
 
 
 ## Demo
@@ -42,6 +45,7 @@ untuk menyiapkan projek ini ada beberapa hal yang harus anda siapkan
 - php > 8.0
 - node (saya menggunakan v18.16.1)
 - mysql (saya menggunakan v8)
+
 
 
 ## Installation & Setup
@@ -83,6 +87,8 @@ jika anda ingin memantai secara realtime langsung selama proses development , an
 
 ### Installation note
 harap dipastikan APP_URL pada ```.env``` sesuai dengan port dimana anda menjalankan project ini, contoh ```APP_URL=http://localhost:8000```
+
+
 
 ## Optimizations
 
